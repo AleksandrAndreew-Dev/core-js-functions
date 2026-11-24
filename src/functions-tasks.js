@@ -108,7 +108,7 @@ function getPolynom(/* ...coefficients */) {
  */
 function memoize(func) {
   const cache = {};
-  return function (...args) {
+  return (...args) => {
     if (!cache[args]) {
       cache[args] = func(...args);
     }
